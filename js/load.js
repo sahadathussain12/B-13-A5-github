@@ -1,3 +1,6 @@
+let allIssues = [];
+
+
 async function loadingIssue() {
   const res = await fetch(
     "https://phi-lab-server.vercel.app/api/v1/lab/issues",
@@ -59,6 +62,40 @@ function displayIssue(issue) {
 
     issueContainer.appendChild(div);
   });
+}
+
+
+function switchtab(tab) {
+  // console.log(tab);
+  const tabs = ["all", "open", "closed"];
+  currentTab = tab;
+
+  for (const teeb of tabs) {
+    const tabName = document.getElementById("tab-" + teeb);
+    if (teeb === tab) {
+      tabName.classList.add("btn-primary");
+      tabName.classList.remove("text-gray-500")
+    } else {
+      tabName.classList.remove("btn-primary");
+       tabName.classList.add("text-gray-500")
+    }
+  }
+  if (tab === "all") {
+    displayIssue(allIssues);
+  } else if (tab === "open") {
+    const openIssue = allIssues.filter((issue) => issue.status === "open");
+    displayIssue(openIssue);
+  } else if (tab === "closed") {
+    const closedIssue = allIssues.filter((issue) => issue.status === "closed");
+    displayIssue(closedIssue);
+  }
+}
+const loadWordDetail = async (id) =>{
+  const url = `https://phi-lab-server.vercel.app/api/v1/lab/issue/${id}`
+  console.log(url);
+  const res = await fetch(url)
+  const details = await res.json();
+ displayDetais(details.data);
 }
 
 

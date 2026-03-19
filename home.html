@@ -7,12 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
 <body>
-    <section>
+ <section>
   <div class="navbar bg-base-100 shadow-sm flex justify-between p-5">
 
     <div class="flex items-center">
@@ -31,7 +31,6 @@
 </section>
 
 
-
 <section>
     <div class="mx-auto w-[1100px] mt-10">
         <div class="bg-white p-6 rounded-lg shadow flex gap-4">
@@ -45,7 +44,6 @@
         
     </div>
 </section>
-
 
 
 <section>
@@ -83,6 +81,29 @@
 </div>
 </section>
 
+<section id="spainner" class="flex justify-center items-center py-10 hidden">
+  <span class="loading loading-bars loading-md"></span>
+</section>
 
+
+<div id="issue-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-[1100px]  mx-auto mt-6">
+  
+</div>
+
+<!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+<dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="detail-container" class=""></div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-primary">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+<script src="js/load.js"></script>
 </body>
 </html>
