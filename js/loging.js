@@ -4,7 +4,7 @@ console.log("hello");
 
 
 document.getElementById('loging').addEventListener('click',function(){
-    const userInput = document.getElementById('ussrname')
+    const userInput = document.getElementById('username')
     const userName = userInput.value
     console.log(userName);
 
@@ -14,7 +14,7 @@ document.getElementById('loging').addEventListener('click',function(){
 
     if(userName==='admin'&& password === 'admin123'){
         alert('loging success')
-        window.location.assign("/home.html")
+       window.location.assign("home.html");
     }
     else{
         alert('loging faled')

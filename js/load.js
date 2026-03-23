@@ -20,7 +20,7 @@ const spainner = (spain)=>{
   }
   else{
     document.getElementById('spainner').classList.add('hidden')
-    document.getElementById('issue-container').classList('hidden')
+    document.getElementById('issue-container').classList.remove('hidden')
   }
 }
 
